@@ -21,7 +21,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true,
     secret:"sqsjhdsdhd",
-    store: new MongoStore({ url: 'mongodb://root:abc123@ds231245.mlab.com:31245/dylannewsletter'})
+    store: new MongoStore({ url: 'mongodb://<user>:<pw>@ds231245.mlab.com:31245/dylannewsletter'})
 }));
 app.use(flash());
 
@@ -34,7 +34,7 @@ app.route('/')
             url:'https://us17.api.mailchimp.com/3.0/lists/a3c4cfb9bd/members',
             method: 'POST',
             headers: {
-                'Authorization':'randomUser 8295920d7e2d2b6f1523fe31488ff3fb-us17',
+                'Authorization':'randomUser <api>',
                 'Content-Type': 'application/json'
             },
             json: {
